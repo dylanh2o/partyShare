@@ -1,9 +1,9 @@
+<?php
 /*
 Page     : index.php
 Auteur   : Carluccio Dylan
 Fonction : Page d'accueil du site
 */
-<?php
 session_start();
 include('pages/mysql.php');
 include('pages/fonction.php');
