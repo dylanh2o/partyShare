@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+
+input, select, textarea {
+    border: solid black !important;
+}
+
+label {
+    color: black;
+}
+
+body {
+    font-family: 'Marmelad', sans-serif;
+    color: white;
+    background: #2d2d2d;
+}
+
+.flexEvents {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+h1 {
+    color: #f6f6f6 !important;
+}
+
+.flexHome {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.test {
+    border: white 1px solid;
+    padding: 20px;
+    text-align: center;
+}
+
+.centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.coverCadre {
+    height: 50vh;
+    max-height: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    background: url(../images/cover.jpg) no-repeat bottom fixed;
+}
+
+.longeurInput {
+    width: 500px !important;
+}
+
+.formulaireRecherche {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonMillieu {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSpecial {
+    color: white !important;
+    border-color: black !important;
+}
+
+.buttonSpecial:hover {
+    border-color: white !important;
+}
+.styleButton:hover {
+    border-color: black !important;
+}
+#boutonEvenements {
+    float: right;
+}
+
+.topCadre {
+    height: 50px;
+}
+
+.modifierMembre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.erreurModifier {
+    color: red;
+    position: relative;
+    top: -18px;
+    padding-left: 12px;
+}
+
+.erreur {
+    color: red;
+    padding-left: 12px;
+}
+
+.bon {
+    color: green;
+    padding-left: 12px;
+}
+
+.boutonRejoint {
+    color: green !important;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border-top: 1px solid white;
+}
+#topBody{
+    height: 25px;
+}
+@media (max-width: 960px) {
+
+}

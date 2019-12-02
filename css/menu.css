@@ -1,0 +1,233 @@
+/*Menu inspiré de https://codepen.io/mutedblues/pen/MmPNPG*/
+
+nav a {
+    /*Change la couleur du texte du menu:white*/
+    color: black;
+}
+
+
+nav {
+    /*met une ombre:noir */
+    box-shadow: 0px 1px 4px 0px black;
+    /*Change la position:sticky
+  sticky: tient la position quand l'objet est hors de portés
+    */
+    position: sticky;
+    /*Positionne le haut:0*/
+    top: 0;
+    /*Fixe la taille:100%*/
+    width: 100%;
+    /*Indique l'empilement:100(plus haut)*/
+    z-index: 100;
+    /*Change la couleur du fond:blanc*/
+    background-color: #fff;
+}
+
+.Active {
+    /*Change la couleur du texte du menu:blanc*/
+    background-color: white;
+    /*Change la couleur du texte du menu:blanc*/
+    color: white;
+}
+
+nav ul {
+    /*Change l'icone du ul:aucun*/
+    list-style: none;
+    /*tout ce qui dépasse est caché*/
+    overflow: hidden;
+    /*Change la couleur du fond:blanc*/
+    background-color: white;
+    margin: 0px;
+    padding: 0px
+}
+
+nav li a {
+    /*Affiche les a:bloque*/
+    display: block;
+    /*Ajoute du voulme au a:20 px,20px*/
+    padding: 20px 20px;
+    /*Modifie trait en dessous des a:aucun*/
+    text-decoration: none;
+    /*Ajoute bordure:1px,solide,bleu*/
+    border-bottom: 1px solid black;
+}
+
+/*Quand la souris passe dessus*/
+nav li a:hover {
+    /*Change la couleur du fond:rose*/
+    background-color: black;
+    /*Modifie trait en dessous des a:aucun*/
+    text-decoration: none;
+    color: white;
+}
+
+/*Quand la souris passe dessus*/
+nav .MenuBouton:hover {
+    /*Change la couleur du fond:rose*/
+    background-color: black;
+}
+
+nav .Logo {
+    /*Affiche le logo :bloque*/
+    display: block;
+    /*Deplace le logo:Gauche*/
+    float: left;
+    /*Cange la police:2em*/
+    font-size: 2em;
+    /*Ajoute du voulme au logo:10 px,20px*/
+    padding: 0px 20px;
+    /*Change la font :bold*/
+    font-weight: bold;
+    /*Change la couleur du texte du menu:white*/
+    color: black;
+    /*Change le curoso:pointer*/
+    cursor: pointer;
+
+}
+
+nav .Menu {
+    /*Le Menu flotant est dépacé vers le bas*/
+    clear: both;
+    /* fixe max-height:0*/
+    max-height: 0;
+    /* Fixe le temps de transition:0+2s */
+    transition: max-height .2s ease-out;
+}
+
+/* Menu icone */
+nav .MenuIcone {
+    /*Change le curoso:pointer*/
+    cursor: pointer;
+    /* deplace le menu icone:droite */
+    float: right;
+    /*Ajoute du voulme au Menu Icone:28px,20px*/
+    padding: 20px 30px;
+    /* Fixe la position:relative */
+    position: relative;
+}
+
+/* crée la barre du millieu(icone menu)*/
+nav .MenuIcone .NavIcone {
+    /* Change la couleur:blanc */
+    background: black;
+    /*Affiche la barre:bloque*/
+    display: block;
+    /* Change la Hauteur:2px */
+    height: 2px;
+    /* Fixe la position:relative */
+    position: relative;
+    /* Fixe le temps de transition:2s */
+    transition: background .2s ease-out;
+    /* longeur:18px */
+    width: 18px;
+}
+
+/* crée la barre du millieu(icone menu)*/
+nav .MenuIcone .NavIcone:before,
+nav .MenuIcone .NavIcone:after {
+    /* Change la couleur:blanc */
+    background: black;
+    /* Fait comme si il y avais du contenue */
+    content: '';
+
+    /* fixe la hauteur:100% */
+    height: 100%;
+    /* Fixe la position:absolute */
+    position: absolute;
+    /* Fixe le temps de transition:2s */
+    transition: all .2s ease-out;
+    /* longeur:100% */
+    width: 100%;
+}
+
+nav .MenuIcone .NavIcone:before {
+    /* copie le trait plus bas de:5px */
+    top: 5px;
+}
+
+nav .MenuIcone .NavIcone:after {
+    /* copie le trait plus haut de:5px */
+    top: -5px;
+}
+
+/* Menu bouton */
+nav .MenuBouton {
+    /* Cache le checkbox */
+    display: none;
+}
+
+nav .MenuBouton:checked ~ .Menu {
+    /* max de la hauteur:360px */
+    max-height: 360px;
+}
+
+nav .MenuBouton:checked ~ .MenuIcone .NavIcone {
+    /* Rend transparant la barre du milieu */
+    background: transparent;
+}
+
+nav .MenuBouton:checked ~ .MenuIcone .NavIcone:before {
+    /* Tourne de -45 degree la barre du haut */
+    transform: rotate(-45deg);
+}
+
+nav .MenuBouton:checked ~ .MenuIcone .NavIcone:after {
+    /* Tourne de 45 degree la barre du bas */
+    transform: rotate(45deg);
+}
+
+nav .MenuBouton:checked ~ .MenuIcone:not(.steps) .NavIcone:before,
+nav .MenuBouton:checked ~ .MenuIcone:not(.steps) .NavIcone:after {
+    /* FIXE LE TOP:0PX */
+    top: 0;
+}
+
+
+@media (min-width: 961px) {
+
+    nav li {
+        /* Deplace le li:Gauche */
+        float: left;
+    }
+
+    nav li a {
+        /*Ajoute du voulme au Menu Icone:20px,30px*/
+        padding: 12px 30px;
+        /*Ajoute bordure:1px,solide,bleu*/
+        border-right: 1px solid black;
+        border-bottom: none;
+    }
+
+    nav .Menu {
+        /* Déplacement vers le bas :aucun */
+        clear: none;
+        /* Fixhe max-height:aucun */
+        max-height: none;
+    }
+
+    nav .MenuIcone {
+        /* Change l'affichage:aucun */
+        display: none;
+
+    }
+
+    nav .Logo {
+        /*Affiche le logo :bloque*/
+        display: block;
+        /*Deplace le logo:Gauche*/
+        float: left;
+        /*Cange la police:2em*/
+        font-size: 2em;
+        /*Ajoute du voulme au logo:10 px,20px*/
+        padding: 0px 20px;
+        /*Change la font :bold*/
+        font-weight: bold;
+        /*Change la couleur du texte du menu:noir*/
+        color: black;
+        /*Change le curoso:pointer*/
+        cursor: pointer;
+        /*Ajoute bordure:1px,solide,bleu*/
+        border-right: 1px solid black;
+
+    }
+}
