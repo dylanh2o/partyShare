@@ -9,6 +9,10 @@ input, select, textarea {
     border: solid black !important;
 }
 
+textarea {
+    height: 26vh !important;
+}
+
 label {
     color: black;
 }
@@ -79,9 +83,11 @@ h1 {
 .buttonSpecial:hover {
     border-color: white !important;
 }
+
 .styleButton:hover {
     border-color: black !important;
 }
+
 #boutonEvenements {
     float: right;
 }
@@ -121,9 +127,11 @@ footer {
     color: white;
     border-top: 1px solid white;
 }
-#topBody{
+
+#topBody {
     height: 25px;
 }
+
 @media (max-width: 960px) {
 
 }

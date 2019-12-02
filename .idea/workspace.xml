@@ -34,7 +34,7 @@
   <component name="ProjectId" id="1Rs3ujk0839L1i83LjwleGwaE1U" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -118,7 +118,8 @@
       <workItem from="1574167583140" duration="8030000" />
       <workItem from="1575289967342" duration="8982000" />
       <workItem from="1575304632463" duration="1109000" />
-      <workItem from="1575307702385" duration="47000" />
+      <workItem from="1575307702385" duration="680000" />
+      <workItem from="1575311302094" duration="1063000" />
     </task>
     <servers />
   </component>
@@ -130,7 +131,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
